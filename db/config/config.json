@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "postgres",
-    "password": "Shadi",
+    "password": "walaa12",
     "database": "treasurehunt_db",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "logging": true
+    "logging": false
   },
   "test": {
     "username": "root",
