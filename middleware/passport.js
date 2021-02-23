@@ -33,7 +33,9 @@ exports.localStrategy = new LocalStrategy(async (username, password, done) => {
       },
     });
 
-    let passwordsMatch = user ? bcrypt.compare(password, user.passord) : false;
+    let passwordsMatch = user
+      ? await bcrypt.compare(password, user.password)
+      : false;
     return done(null, passwordsMatch ? user : false);
   } catch (error) {
     return done(error);
